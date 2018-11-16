@@ -2,10 +2,10 @@ require('cypress-testing-library/add-commands');
 
 const selectors = require('../fixtures/selectors.json');
 
-Cypress.Commands.add('protectFiles', () => {
+Cypress.Commands.add('protectFiles', (imageLocation, imageName) => {
   cy.visit('/wp-admin/media-new.php?browser-uploader').
-  fixture('bot.png').as('bot');
-  cy.uploadFile('#async-upload', 'bot.png', 'png').
+  fixture(imageLocation).as(imageName);
+  cy.uploadFile('#async-upload', imageLocation, imageName ).
     get('#html-upload').
     click().
     visit('/wp-admin/upload.php?mode=list').
