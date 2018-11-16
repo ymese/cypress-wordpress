@@ -40,7 +40,9 @@ Cypress.Commands.add('deleteMediaFiles', () => {
     click();
 });
 
-Cypress.Commands.add('uploadMediaFile', (fileName, extension, name) => {
+Cypress.Commands.add('uploadMediaFile', (fileName, name) => {
+  let file = fileName.split('.');
+  extension = extension[file[file.length-1]];
   cy.visit(selectors.pages.uploadFile);
   cy.fixture(fileName).as(name);
   cy.uploadFile('#async-upload', fileName, extension).

@@ -1,6 +1,6 @@
 require('cypress-testing-library/add-commands');
 
-const selectors = require('../fixtures/selectors.json');
+const selectors = require('../fixtures/selectors');
 
 Cypress.Commands.add('protectFiles', (imageLocation, imageName) => {
   cy.visit('/wp-admin/media-new.php?browser-uploader').
@@ -11,7 +11,20 @@ Cypress.Commands.add('protectFiles', (imageLocation, imageName) => {
     visit('/wp-admin/upload.php?mode=list').
     getByText('Configure file protection').
     click({force: true}).
-    getByText('Protect this file').
+    getByText(selectors.nameButton.protectButton).
+    click();
+});
+
+Cypress.Commands.add('syncFiles', (imageLocation, imageName) => {
+  cy.visit('/wp-admin/media-new.php?browser-uploader').
+  fixture(imageLocation).as(imageName);
+  cy.uploadFile('#async-upload', imageLocation, imageName ).
+    get('#html-upload').
+    click().
+    visit('/wp-admin/upload.php?mode=list').
+    getByText('Configure file protection').
+    click({force: true}).
+    get(selectors.popUp.syncButton).
     click();
 });
 

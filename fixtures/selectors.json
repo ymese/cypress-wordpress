@@ -16,5 +16,12 @@
       "ForceDownload": ":nth-child(13) > :nth-child(1) > .pda_switch > .pda-slider"
     },
     "uploadFile": "/wp-admin/media-new.php"
+  },
+  "nameButton" : {
+    "syncButton": "Sync to S3",
+    "protectButton": "Protect this file"
+  },
+  "popUp": {
+    "syncButton": ".pup-form > div > input.button"
   }
 }
