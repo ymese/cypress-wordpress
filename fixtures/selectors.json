@@ -1,0 +1,20 @@
+{
+  "fileAccessPermissionRolesSelect": ".Select-value",
+  "optionFileAuthor": "#react-select-2--option-2",
+  "originalLink": ".pda-orginal-link",
+  "logoutBar": "#wp-admin-bar-my-account",
+  "closePopUpIcon": ".close_btn > .fa",
+  "pdaSettingPage": "/wp-admin/admin.php?page=pda-gold",
+  "customRolesInSettingPage": "#grant-access > :nth-child(2) > .select2 > .selection > .select2-selection > .select2-selection__rendered",
+  "configureFileProtection": "Configure file protection",
+  "pages": {
+    "media": "/wp-admin/upload.php",
+    "generalSettings": {
+      "fileAccessPermission": "#file_access_permission",
+      "autoProtectNewFile": ":nth-child(2) > :nth-child(1) > .pda_switch > .pda-slider",
+      "autoCreateNewPrivateLink": ":nth-child(12) > :nth-child(1) > .pda_switch > .pda-slider",
+      "ForceDownload": ":nth-child(13) > :nth-child(1) > .pda_switch > .pda-slider"
+    },
+    "uploadFile": "/wp-admin/media-new.php"
+  }
+}

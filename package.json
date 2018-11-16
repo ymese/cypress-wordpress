@@ -1,0 +1,22 @@
+{
+  "name": "cypress-wordpress",
+  "version": "1.0.0",
+  "description": "Cypress helper commands for WordPress",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ymese/cypress-wordpress.git"
+  },
+  "author": "YMESE",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ymese/cypress-wordpress/issues"
+  },
+  "homepage": "https://github.com/ymese/cypress-wordpress#readme",
+  "dependencies": {
+    "cypress-testing-library": "^2.3.3"
+  }
+}
